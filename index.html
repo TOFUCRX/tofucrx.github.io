@@ -3,95 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOFUSOFT 2510 - あなたのブラウザに、最初の革新を。</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- SEO & SNSシェア用メタデータ -->
+    <title>TOFUCRX - 究極のオールインワン拡張機能、誕生。</title>
+    <meta name="description" content="TOFUCRXは、QRコード生成から始まり、タブ管理、ノートパッドなど全ての機能を統合する、あなたのブラウジング体験を根本から変える究極のChrome拡張機能です。">
+    <meta property="og:title" content="TOFUCRX - 究極のオールインワン拡張機能、誕生。">
+    <meta property="og:description" content="一つの拡張機能で、すべてが完結する。TOFUCRXで、かつてないほどスマートで高速なブラウジング体験を手に入れましょう。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tofucrx.github.io/">
+    <meta property="og:image" content="https://tofucrx.github.io/images/screenshot-qrcode.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ファビコン -->
+    <link rel="icon" href="images/tofucrx_icon.png" type="image/png">
+    
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
-    <!-- ======== ヘッダーエリア ======== -->
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="nav-left">
-                <a href="#" class="logo-link">
-                    <img src="TOFUSOFT.PNG" alt="TOFUSOFT ロゴ" class="logo-image">
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#feature-2510">機能</a></li>
-                    <li><a href="#roadmap">ロードマップ</a></li>
-                    <li><a href="#how-to-use">導入方法</a></li>
-                </ul>
-            </div>
-            <div class="nav-right">
-                <a href="#download" class="nav-button">今すぐ無料で入手</a>
-            </div>
-        </nav>
-    </header>
+    <!-- ヘッダーはJavaScriptによってここに挿入されます -->
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- ======== ヒーローセクション ======== -->
         <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">TOFUSOFT 2510</h1>
-                <p class="hero-subtitle">TOFUSOFT統合スイートからの最初のリリース。<br>まずは、強力なQRコード生成機能から、その革新を体験してください。</p>
-                <!-- ★★★ CRXファイル名を指定のものに変更 ★★★ -->
-                <a href="TOFUSOFT_2510.CRX" class="hero-button" id="download">無料でChromeに追加</a>
+            <h1 class="hero-title fade-in">一つの拡張機能が、全てを変える。</h1>
+            <p class="hero-subtitle fade-in">TOFUCRXは、あなたのブラウジング体験を再定義します。<br>究極のオールインワン拡張機能、その最初の実力を今すぐ体感してください。</p>
+            
+            <!-- JavaScriptがOSを判定して、ここに最適なボタンを挿入します -->
+            <div id="hero-button-container">
+                <!-- 初期表示用の仮ボタン (JSですぐに置き換えられます) -->
+                <a href="#" class="hero-button fade-in">読み込み中...</a>
             </div>
         </section>
 
-        <!-- ======== 機能紹介セクション (2510の機能) ======== -->
-        <section class="platform-section" id="feature-2510">
-            <div class="platform-content">
-                <div class="platform-text">
-                    <h2>ワンクリックで、URLを共有。</h2>
-                    <p>PCで見ているウェブサイトを、スマートフォンですぐに開きたい。そんな時、もうURLを苦労して入力する必要はありません。TOFUSOFT 2510は、アイコンをクリックするだけで、表示中ページのQRコードを即座に生成。シームレスなデバイス連携を実現します。</p>
-                    <!-- ★★★ CRXファイル名を指定のものに変更 ★★★ -->
-                    <a href="TOFUSOFT_2510.CRX" class="platform-button">今すぐ体験する</a>
+        <!-- ======== 機能紹介セクション ======== -->
+        <section class="platform-section" id="feature">
+            <div class="platform-content container">
+                <div class="platform-text fade-in">
+                    <h2>PCの画面を、瞬時にスマホへ。</h2>
+                    <p>PCで見ているサイトのURLをスマートフォンに送る、その一手間をゼロにします。TOFUCRXはアイコンをクリックするだけでQRコードを即時生成。デバイス間の情報共有を、思考の速度で行えるようにします。</p>
+                    <a href="features.html" class="platform-button">機能についてさらに詳しく</a>
                 </div>
-                <div class="platform-image">
-                    <!-- ★★★ 2510の機能がわかるスクショに変更 ★★★ -->
-                    <img src="screenshot-qrcode.png" alt="QRコード生成ポップアップのスクリーンショット">
+                <div class="platform-image fade-in">
+                    <img src="images/screenshot-qrcode.png" alt="QRコード生成ポップアップのスクリーンショット">
                 </div>
             </div>
         </section>
-
-        <!-- ======== ロードマップセクション ======== -->
-        <section class="features-list-section" id="roadmap">
-            <h2>今後のアップデート予定 (ロードマップ)</h2>
-            <p class="roadmap-subtitle">TOFUSOFTは、QRコード生成を皮切りに、究極の総合型拡張機能へと進化していきます。</p>
-            <div class="features-list-grid">
-                <div class="feature-item"><h4>タブ管理</h4><p>複数のタブをグループ化し、保存・復元。</div>
-                <div class="feature-item"><h4>ノートパッド</h4><p>ブラウザ内で素早くメモを取れる。</div>
-                <div class="feature-item"><h4>リーダーモード</h4><p>広告などを非表示にし、本文だけを読みやすく表示。</div>
-                <div class="feature-item"><h4>カラーピッカー</h4><p>Webページ上の任意の色を抽出。</div>
-                <div class="feature-item"><h4>スクリーンショット</h4><p>表示領域やページ全体を簡単にキャプチャ。</div>
-                <div class="feature-item"><h4>And More...</h4><p>あなたのブラウジング体験を向上させる、さらなる機能を計画中です。</div>
+        
+        <!-- ======== ロードマップ概要セクション ======== -->
+        <section class="features-list-section" id="roadmap-summary">
+             <div class="container">
+                <h2 class="section-title fade-in">進化を止めない、未来への約束。</h2>
+                <p class="section-subtitle fade-in">TOFUCRXは、今日のリリースがスタートラインです。あなたの生産性を最大化するため、私たちは最高の機能を統合し続けます。</p>
+                <div class="features-list-grid">
+                    <div class="feature-item fade-in"><h4>タブ管理</h4><p>複数のタブをグループ化し、保存・復元。</p></div>
+                    <div class="feature-item fade-in"><h4>リーダーモード</h4><p>広告などを非表示にし、本文だけを読みやすく表示。</p></div>
+                    <div class="feature-item fade-in"><h4>カラーピッカー</h4><p>Webページ上の任意の色を抽出。</p></div>
+                    <div class="feature-item fade-in"><h4>スクリーンショット</h4><p>表示領域やページ全体を簡単にキャプチャ。</p></div>
+                </div>
+                 <a href="roadmap.html" class="section-link-button fade-in">ロードマップ全体を見る</a>
             </div>
         </section>
 
-         <!-- ======== 使い方セクション ======== -->
-         <section class="how-to-use-section" id="how-to-use">
-            <h2>3ステップで簡単スタート</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <h3>Step 1. ダウンロード</h3>
-                    <!-- ★★★ CRXファイル名を指定のものに変更 ★★★ -->
-                    <p>このページから <strong>TOFUSOFT_2510.CRX</strong> ファイルをダウンロードします。</p>
+        <!-- ======== 使い方セクション (OS別表示に対応) ======== -->
+        <section class="how-to-use-section" id="how-to-use">
+            <div class="container">
+                
+                <!-- ZIP版 (Win/Mac) の説明：デフォルトは非表示 -->
+                <div id="instructions-zip" class="hidden">
+                    <h2 class="section-title fade-in">導入方法 (Windows / Mac ユーザー向け)</h2>
+                    <div class="steps-grid">
+                        <div class="step-card fade-in"><h3>Step 1. ダウンロード</h3><p>このページから <strong>tofucrx.zip</strong> ファイルをダウンロードします。</p></div>
+                        <div class="step-card fade-in"><h3>Step 2. ファイルを解凍</h3><p>ダウンロードしたZIPファイルを解凍（展開）します。解凍したフォルダは、後で消さない場所に置いてください。</p></div>
+                        <div class="step-card fade-in"><h3>Step 3. 拡張機能ページを開く</h3><p>Chromeのアドレスバーに <strong>chrome://extensions</strong> と入力し、管理ページを開きます。</p></div>
+                        <div class="step-card fade-in"><h3>Step 4. デベロッパーモードをON</h3><p>ページの右上にある「<strong>デベロッパー モード</strong>」のスイッチをONにします。</p></div>
+                        <div class="step-card fade-in"><h3>Step 5. 拡張機能を読み込む</h3><p>左上に表示される「<strong>パッケージ化されていない拡張機能を読み込む</strong>」ボタンを押し、Step 2で解凍した<strong>フォルダを選択</strong>します。</p></div>
+                    </div>
                 </div>
-                <div class="step-card">
-                    <h3>Step 2. 拡張機能ページを開く</h3>
-                    <p>Chromeのアドレスバーに <strong>chrome://extensions</strong> と入力し、管理ページを開きます。</p>
+
+                <!-- CRX版 (ChromeOS/Linux) の説明：デフォルトは非表示 -->
+                <div id="instructions-crx" class="hidden">
+                    <h2 class="section-title fade-in">導入方法 (ChromeOS / Linux ユーザー向け)</h2>
+                    <div class="steps-grid">
+                        <div class="step-card fade-in"><h3>Step 1. ダウンロード</h3><p>このページから <strong>tofucrx.crx</strong> ファイルをダウンロードします。</p></div>
+                        <div class="step-card fade-in"><h3>Step 2. 拡張機能ページを開く</h3><p>Chromeのアドレスバーに <strong>chrome://extensions</strong> と入力し、管理ページを開きます。</p></div>
+                        <div class="step-card fade-in"><h3>Step 3. インストール</h3><p>ダウンロードしたCRXファイルを、このページにドラッグ＆ドロップし、「拡張機能を追加」をクリックします。</p></div>
+                    </div>
                 </div>
-                <div class="step-card">
-                    <h3>Step 3. インストール</h3>
-                    <p>CRXファイルをページにドラッグ＆ドロップし、「拡張機能を追加」をクリックします。</p>
+
+            </div>
+        </section>
+
+        <!-- ======== FAQセクション ======== -->
+        <section class="faq-section" id="faq">
+             <div class="container">
+                <h2 class="section-title fade-in">よくある質問 (FAQ)</h2>
+                <div class="faq-item fade-in">
+                    <details>
+                        <summary>TOFUCRXは無料ですか？</summary>
+                        <p>はい、現在提供しているすべての機能を完全無料でご利用いただけます。</p>
+                    </details>
+                </div>
+                 <div class="faq-item fade-in">
+                    <details>
+                        <summary>安全性は大丈夫ですか？</summary>
+                        <p>はい。TOFUCRXはユーザーのプライバシーを最優先に設計されています。詳細は<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+                    </details>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ======== フッターエリア ======== -->
-    <footer class="main-footer">
-        <p>&copy; 2025 TOFUSOFT. All rights reserved.</p>
-    </footer>
+    <!-- フッターはJavaScriptによってここに挿入されます -->
+    <div id="footer-placeholder"></div>
 
+    <!-- JavaScriptファイル (読み込み順が重要) -->
+    <script src="js/main.js" defer></script>
+    <script src="js/html-loader.js" defer></script>
+    <script src="js/installer.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+tofucrx_website/ (プロジェクトのルートフォルダ)
+│
+├── index.html
+├── features.html
+├── roadmap.html
+├── contact.html
+├── privacy.html
+├── terms.html
+│
+├── _header.html
+├── _footer.html
+│
+├── tofucrx.crx         ( ★★★ ファイル名を固定化 ★★★ )
+│
+├── css/
+│   ├── base.css
+│   ├── layout.css
+│   └── pages.css
+│
+├── js/
+│   ├── main.js
+│   └── html-loader.js
+│   |---installer.js
+|
+└── images/
+    ├── tofucrx_logo.png
+    ├── tofucrx_icon.png
+    ├── screenshot-qrcode.png
+    ├── icon-capture.svg
+    ├── icon-tab.svg
+    └── icon-note.svg
