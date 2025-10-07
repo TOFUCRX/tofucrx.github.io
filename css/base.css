@@ -1,0 +1,73 @@
+/* ===================================================================
+   Base Stylesheet (変数、リセット、基本設定)
+   Project: TOFUCRX Website
+   =================================================================== */
+
+/* --- :root 変数定義 --- */
+/* サイト全体で使用するカラーパレットや数値をここで一元管理します */
+:root {
+    /* Brand Colors */
+    --primary-color: #0067b8;       /* メインカラー (リンク、ボタンなど) */
+    --primary-color-dark: #004578;  /* メインカラーのホバー時など */
+
+    /* Grayscale Colors */
+    --light-gray: #f2f2f2;          /* 明るい背景色 (セクション背景など) */
+    --dark-bg: #0d1117;             /* 暗い背景色 (使い方セクション) */
+    --border-color: #e6e6e6;        /* 境界線 */
+
+    /* Text Colors */
+    --text-color: #333;             /* 基本のテキストカラー */
+    --text-light: #555;             /* やや薄いテキストカラー */
+}
+
+
+/* --- 基本的なスタイルリセットと設定 --- */
+/* スムーズスクロールを有効化 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* bodyのデフォルトマージンを無くし、基本フォントと色を設定 */
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Meiryo", "Hiragino Kaku Gothic ProN", "MS PGothic", sans-serif;
+    background-color: #fff;
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased; /* フォントを滑らかに表示 (macOS, iOS) */
+    -moz-osx-font-smoothing: grayscale;    /* フォントを滑らかに表示 (Firefox) */
+    line-height: 1.7; /* 行の高さを読みやすく設定 */
+}
+
+/* aタグの基本スタイル */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--primary-color-dark);
+}
+
+/* 見出しタグのフォントウェイト */
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+/* 画像がコンテナからはみ出さないように設定 */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; /* 画像下の余分な隙間を削除 */
+}
+
+/* サイトの基本となるセンタリング用コンテナ */
+.container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 3%;
+    padding-left: 3%;
+    box-sizing: border-box;
+}

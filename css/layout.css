@@ -1,0 +1,172 @@
+/* ===================================================================
+   Layout Stylesheet (ヘッダー, フッター, 共通コンポーネント)
+   Project: TOFUCRX Website
+   =================================================================== */
+
+/* --- ヘッダー --- */
+.main-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* 背景をぼかすガラス効果 */
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* スクロールした時にヘッダーに影をつける */
+.main-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.logo-image {
+    height: 32px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 0 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-light);
+    transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* 現在表示しているページのメニュー項目をハイライト */
+.nav-links li a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* --- 共通ボタン --- */
+/* ヘッダーのダウンロードボタン */
+.nav-button {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background: var(--primary-color-dark);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 103, 184, 0.2);
+}
+
+/* ページ内で使用するメインボタン */
+.platform-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 14px 28px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.platform-button:hover {
+    background-color: var(--primary-color-dark);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* --- フッター --- */
+.main-footer {
+    background: #222;
+    color: #aaa;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* 画面が狭い時に折り返す */
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.footer-logo {
+    height: 28px;
+    opacity: 0.8;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #bbb;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    margin: 0;
+}
+
+/* --- 共通アニメーション --- */
+/* スクロールでフワッと表示される効果 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 複数のアイテムを順番に表示するための遅延設定 */
+.fade-in:nth-child(2) { transition-delay: 0.1s; }
+.fade-in:nth-child(3) { transition-delay: 0.2s; }
+.fade-in:nth-child(4) { transition-delay: 0.3s; }
+
+
+/* --- レイアウトのレスポンシブ対応 --- */
+@media (max-width: 768px) {
+    /* モバイル画面ではナビゲーションメニューを非表示にする */
+    .nav-links {
+        display: none;
+    }
+}
