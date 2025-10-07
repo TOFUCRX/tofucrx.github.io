@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 260px; /* 少しだけ幅を広げます */
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    #qrcode-container {
+      padding: 15px;
+    }
+    #qrcode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /* ★★★ ここから追加 ★★★ */
+    .action-panel {
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-top: 1px solid #e6e6e6;
+    }
+    #copy-url-btn {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        background-color: #0067b8;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    #copy-url-btn:hover {
+        background-color: #004578;
+    }
+    #status-message {
+        height: 16px;
+        font-size: 12px;
+        color: #0067b8;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+    /* ★★★ ここまで追加 ★★★ */
+  </style>
+</head>
+<body>
+  <!-- QRコードをコンテナで囲む -->
+  <div id="qrcode-container">
+    <div id="qrcode"></div>
+  </div>
+
+  <!-- ★★★ ここから追加 ★★★ -->
+  <div class="action-panel">
+    <button id="copy-url-btn">現在のURLをコピー</button>
+    <p id="status-message"></p>
+  </div>
+  <!-- ★★★ ここまで追加 ★★★ -->
+
+  <script src="qrcode.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
